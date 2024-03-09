@@ -1,0 +1,23 @@
+<div class="container">
+    <br>
+    <h2> Sign-Up for a new account </h1>
+    <br>
+    <%= form_for @user do |f|%>
+        <form>
+            <div class="form-group">
+                <%= f.label :username%>
+                <label for="exampleInputEmail1">Email address</label>
+                <%= f.text_field :username , type:"email", class:"form-control", id:"exampleInputEmail1"%>
+                <%# <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> %>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <br>
+            <%= f.submit "Submit", class: "btn btn-primary"%>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    <% end %>
+</div>
